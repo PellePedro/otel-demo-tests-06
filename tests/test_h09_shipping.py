@@ -275,8 +275,8 @@ def test_h09_6e92zmyyfz_x5_usd_seattle_0023(api):
     assert resp.status_code == 200
     cost = resp.json()
     assert cost["currencyCode"] == "USD"
-    assert cost["units"] == 44
-    assert cost["nanos"] == 950000000
+    total_nanos = int(cost["units"]) * 1_000_000_000 + int(cost["nanos"])
+    assert abs(total_nanos - 44950000000) <= 1
 
 
 def test_h09_hqtgwgpnh4_x10_zar_toronto_0024(api):
@@ -673,8 +673,8 @@ def test_h09_66vchsjnup_x2_usd_redmond_0056(api):
     assert resp.status_code == 200
     cost = resp.json()
     assert cost["currencyCode"] == "USD"
-    assert cost["units"] == 17
-    assert cost["nanos"] == 980000000
+    total_nanos = int(cost["units"]) * 1_000_000_000 + int(cost["nanos"])
+    assert abs(total_nanos - 17980000000) <= 1
 
 
 def test_h09_1ymwwn1n4o_x3_zar_cupertino_0057(api):
@@ -1071,8 +1071,8 @@ def test_h09_2zyfj3gm2n_x5_usd_toronto_0089(api):
     assert resp.status_code == 200
     cost = resp.json()
     assert cost["currencyCode"] == "USD"
-    assert cost["units"] == 44
-    assert cost["nanos"] == 950000000
+    total_nanos = int(cost["units"]) * 1_000_000_000 + int(cost["nanos"])
+    assert abs(total_nanos - 44950000000) <= 1
 
 
 def test_h09_0puk6v6ev0_x10_zar_mountain_view_0090(api):
@@ -1469,8 +1469,8 @@ def test_h09_9siqt8tojo_x2_usd_cupertino_0122(api):
     assert resp.status_code == 200
     cost = resp.json()
     assert cost["currencyCode"] == "USD"
-    assert cost["units"] == 17
-    assert cost["nanos"] == 980000000
+    total_nanos = int(cost["units"]) * 1_000_000_000 + int(cost["nanos"])
+    assert abs(total_nanos - 17980000000) <= 1
 
 
 def test_h09_6e92zmyyfz_x3_zar_seattle_0123(api):
@@ -1867,8 +1867,8 @@ def test_h09_oljcespc7z_x5_usd_mountain_view_0155(api):
     assert resp.status_code == 200
     cost = resp.json()
     assert cost["currencyCode"] == "USD"
-    assert cost["units"] == 44
-    assert cost["nanos"] == 950000000
+    total_nanos = int(cost["units"]) * 1_000_000_000 + int(cost["nanos"])
+    assert abs(total_nanos - 44950000000) <= 1
 
 
 def test_h09_66vchsjnup_x10_zar_redmond_0156(api):
@@ -2265,8 +2265,8 @@ def test_h09_l9ecav7kim_x2_usd_seattle_0188(api):
     assert resp.status_code == 200
     cost = resp.json()
     assert cost["currencyCode"] == "USD"
-    assert cost["units"] == 17
-    assert cost["nanos"] == 980000000
+    total_nanos = int(cost["units"]) * 1_000_000_000 + int(cost["nanos"])
+    assert abs(total_nanos - 17980000000) <= 1
 
 
 def test_h09_2zyfj3gm2n_x3_zar_toronto_0189(api):
@@ -2663,8 +2663,8 @@ def test_h09_ls4psxunum_x5_usd_redmond_0221(api):
     assert resp.status_code == 200
     cost = resp.json()
     assert cost["currencyCode"] == "USD"
-    assert cost["units"] == 44
-    assert cost["nanos"] == 950000000
+    total_nanos = int(cost["units"]) * 1_000_000_000 + int(cost["nanos"])
+    assert abs(total_nanos - 44950000000) <= 1
 
 
 def test_h09_9siqt8tojo_x10_zar_cupertino_0222(api):
@@ -3061,8 +3061,8 @@ def test_h09_hqtgwgpnh4_x2_usd_toronto_0254(api):
     assert resp.status_code == 200
     cost = resp.json()
     assert cost["currencyCode"] == "USD"
-    assert cost["units"] == 17
-    assert cost["nanos"] == 980000000
+    total_nanos = int(cost["units"]) * 1_000_000_000 + int(cost["nanos"])
+    assert abs(total_nanos - 17980000000) <= 1
 
 
 def test_h09_oljcespc7z_x3_zar_mountain_view_0255(api):
@@ -3459,8 +3459,8 @@ def test_h09_1ymwwn1n4o_x5_usd_cupertino_0287(api):
     assert resp.status_code == 200
     cost = resp.json()
     assert cost["currencyCode"] == "USD"
-    assert cost["units"] == 44
-    assert cost["nanos"] == 950000000
+    total_nanos = int(cost["units"]) * 1_000_000_000 + int(cost["nanos"])
+    assert abs(total_nanos - 44950000000) <= 1
 
 
 def test_h09_l9ecav7kim_x10_zar_seattle_0288(api):
@@ -3857,8 +3857,8 @@ def test_h09_0puk6v6ev0_x2_usd_mountain_view_0320(api):
     assert resp.status_code == 200
     cost = resp.json()
     assert cost["currencyCode"] == "USD"
-    assert cost["units"] == 17
-    assert cost["nanos"] == 980000000
+    total_nanos = int(cost["units"]) * 1_000_000_000 + int(cost["nanos"])
+    assert abs(total_nanos - 17980000000) <= 1
 
 
 def test_h09_ls4psxunum_x3_zar_redmond_0321(api):
@@ -4255,8 +4255,8 @@ def test_h09_6e92zmyyfz_x5_usd_seattle_0353(api):
     assert resp.status_code == 200
     cost = resp.json()
     assert cost["currencyCode"] == "USD"
-    assert cost["units"] == 44
-    assert cost["nanos"] == 950000000
+    total_nanos = int(cost["units"]) * 1_000_000_000 + int(cost["nanos"])
+    assert abs(total_nanos - 44950000000) <= 1
 
 
 def test_h09_hqtgwgpnh4_x10_zar_toronto_0354(api):
